@@ -21,7 +21,7 @@ def  get_data ():
 st.sidebar.subheader('Rebalance_Dataframe')
 def Rebalance_Buy  (data):
     st.subheader('Rebalance_Buy  :  แปรผกผัน ∝')
-    Z = st.sidebar.slider('Rebalance_Buy : แปรผกผัน ∝', 3 , 200 , 5 )
+    Z = st.sidebar.slider('Rebalance_Buy : แปรผกผัน ∝', 3 , 200 , 3 )
     asset = [round(i , 0)  for i in  np.linspace(0 , data.Close[-1]*2 , Z)]
     cash = [round(i , 0)  for i in  np.linspace(data.Close[-1]*2 , 0 , Z)]
     df = pd.DataFrame(asset , columns= [ 'asset_50%'], index= cash)
