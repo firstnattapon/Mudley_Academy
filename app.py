@@ -12,9 +12,9 @@ tickerSymbol = st.sidebar.text_input('Symbol' ,'BTC-USD')
 
 def  get_data ():
     st.write('Check_Symbol : https://finance.yahoo.com/')
-    # period = st.sidebar.selectbox('Period',('30m','1h', '4h' , '1d'))
+    period = st.sidebar.selectbox('Period',('30m','1h', '4h' , '1d'))
     tickerData = yf.Ticker(tickerSymbol)
-    tickerDf = tickerData.history(period='5m' ,  start='2010-5-31', end='2020-5-31')
+    tickerDf = tickerData.history(period=period ,  start='2010-5-31', end='2020-5-31')
     st.line_chart(tickerDf.Close)
     return tickerDf , tickerSymbol
 
