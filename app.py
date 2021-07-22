@@ -14,7 +14,7 @@ def  get_data ():
     st.write('Check_Symbol : https://finance.yahoo.com/')
     period = st.sidebar.selectbox('Period',('30m','1h', '4h' , '1d'))
     tickerData = yf.Ticker(tickerSymbol)
-    tickerDf = tickerData.history(period=period ,  start='2021-7-15', end='2021-7-31')
+    tickerDf = tickerData.history(period=period ,  start='2021-7-01', end='2021-7-31')
     st.line_chart(tickerDf.Close)
     return tickerDf , tickerSymbol
 
