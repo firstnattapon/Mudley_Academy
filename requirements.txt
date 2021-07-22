@@ -1,5 +1,5 @@
 streamlit
-numpy==1.17.3
-yfinance == 0.1.54
-pandas == 1.0.5
-plotly == 4.8.2
+numpy
+yfinance 
+pandas 
+plotly 
